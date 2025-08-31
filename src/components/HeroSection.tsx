@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Brain, Zap } from "lucide-react";
 import { NeuralBackground } from "./NeuralBackground";
+import DarkVeil from "@/components/ui/DarkVeil"
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center relative items-center overflow-hidden">
       {/* Neural Background */}
       <NeuralBackground />
-      
+     
+
+<div className="absolute inset-0 z-[1]">
+  <DarkVeil />
+</div>
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl px-6">
         {/* Badge */}
