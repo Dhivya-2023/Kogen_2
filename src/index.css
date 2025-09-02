@@ -189,3 +189,25 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 }
+
+/* Base grid overlay */
+.grid-overlay {
+  position: absolute; /* or fixed, relative to container */
+  inset: 0;
+  pointer-events: none; /* so it doesn't block clicks */
+  background-image:
+    linear-gradient(var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 24px 24px; /* grid cell size */
+  z-index: 0; /* behind content */
+}
+
+/* Light theme: dark grid lines */
+.light-theme {
+  --grid-line-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme: white grid lines */
+.dark-theme {
+  --grid-line-color: rgba(255, 255, 255, 0.15);
+}
